@@ -28,6 +28,13 @@
 		0479F24E28AF1D5800823906 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F24D28AF1D5800823906 /* Cocoa.framework */; };
 		0479F25028AF1D5F00823906 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F24F28AF1D5F00823906 /* IOKit.framework */; };
 		0479F25228AF1D7200823906 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F25128AF1D7200823906 /* QuartzCore.framework */; };
+		0479F25828AF1EEB00823906 /* test.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0479F25728AF1EEB00823906 /* test.metal */; };
+		0479F26128AF1FE500823906 /* engine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0479F25F28AF1FE500823906 /* engine.mm */; };
+		0479F26228AF1FE500823906 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F26028AF1FE500823906 /* engine.h */; };
+		0479F26528AF20D000823906 /* image.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F26328AF20D000823906 /* image.h */; };
+		0479F26628AF20D000823906 /* image.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479F26428AF20D000823906 /* image.m */; };
+		0479F26828AF224800823906 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F26728AF224800823906 /* logging.h */; };
+		0479F26B28AF252500823906 /* libvox.compute.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F20A28AF1BBB00823906 /* libvox.compute.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0479F21828AF1BD000823906;
 			remoteInfo = third_party;
+		};
+		0479F25D28AF1F6700823906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0479F1F428AF1B8C00823906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0479F25428AF1EEB00823906;
+			remoteInfo = vox.shader;
+		};
+		0479F26928AF252300823906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0479F1F428AF1B8C00823906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0479F20928AF1BBB00823906;
+			remoteInfo = vox.compute;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -77,6 +98,16 @@
 		0479F24D28AF1D5800823906 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0479F24F28AF1D5F00823906 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		0479F25128AF1D7200823906 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0479F25528AF1EEB00823906 /* vox.shader.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = vox.shader.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479F25728AF1EEB00823906 /* test.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = test.metal; sourceTree = "<group>"; };
+		0479F25C28AF1F2200823906 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		0479F25F28AF1FE500823906 /* engine.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = engine.mm; sourceTree = "<group>"; };
+		0479F26028AF1FE500823906 /* engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		0479F26328AF20D000823906 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
+		0479F26428AF20D000823906 /* image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = image.m; sourceTree = "<group>"; };
+		0479F26728AF224800823906 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
+		0479F26C28AF25CC00823906 /* asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = asset.xcassets; sourceTree = "<group>"; };
+		0479F26F28AF2B0D00823906 /* Image.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Image.tga; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0479F26B28AF252500823906 /* libvox.compute.a in Frameworks */,
 				0479F25228AF1D7200823906 /* QuartzCore.framework in Frameworks */,
 				0479F25028AF1D5F00823906 /* IOKit.framework in Frameworks */,
 				0479F24E28AF1D5800823906 /* Cocoa.framework in Frameworks */,
@@ -113,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				0479F20B28AF1BBB00823906 /* vox.compute */,
+				0479F25628AF1EEB00823906 /* vox.shader */,
 				0479F1FE28AF1B8C00823906 /* apps */,
 				0479F21A28AF1BD000823906 /* third_party */,
 				0479F1FD28AF1B8C00823906 /* Products */,
@@ -126,6 +159,7 @@
 				0479F1FC28AF1B8C00823906 /* apps */,
 				0479F20A28AF1BBB00823906 /* libvox.compute.a */,
 				0479F21928AF1BD000823906 /* libthird_party.a */,
+				0479F25528AF1EEB00823906 /* vox.shader.metallib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +176,13 @@
 		0479F20B28AF1BBB00823906 /* vox.compute */ = {
 			isa = PBXGroup;
 			children = (
+				0479F26728AF224800823906 /* logging.h */,
+				0479F26328AF20D000823906 /* image.h */,
+				0479F26428AF20D000823906 /* image.m */,
+				0479F26028AF1FE500823906 /* engine.h */,
+				0479F25F28AF1FE500823906 /* engine.mm */,
+				0479F26C28AF25CC00823906 /* asset.xcassets */,
+				0479F26F28AF2B0D00823906 /* Image.tga */,
 			);
 			path = vox.compute;
 			sourceTree = "<group>";
@@ -179,6 +220,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0479F25628AF1EEB00823906 /* vox.shader */ = {
+			isa = PBXGroup;
+			children = (
+				0479F25C28AF1F2200823906 /* common.h */,
+				0479F25728AF1EEB00823906 /* test.metal */,
+			);
+			path = vox.shader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -186,6 +236,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0479F26528AF20D000823906 /* image.h in Headers */,
+				0479F26828AF224800823906 /* logging.h in Headers */,
+				0479F26228AF1FE500823906 /* engine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +271,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				0479F26A28AF252300823906 /* PBXTargetDependency */,
+				0479F25E28AF1F6700823906 /* PBXTargetDependency */,
 				0479F24728AF1CE800823906 /* PBXTargetDependency */,
 			);
 			name = apps;
@@ -259,6 +314,21 @@
 			productReference = 0479F21928AF1BD000823906 /* libthird_party.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		0479F25428AF1EEB00823906 /* vox.shader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0479F25928AF1EEB00823906 /* Build configuration list for PBXNativeTarget "vox.shader" */;
+			buildPhases = (
+				0479F25328AF1EEB00823906 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vox.shader;
+			productName = vox.shader;
+			productReference = 0479F25528AF1EEB00823906 /* vox.shader.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,6 +347,9 @@
 					0479F21828AF1BD000823906 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
+					0479F25428AF1EEB00823906 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 0479F1F728AF1B8C00823906 /* Build configuration list for PBXProject "DigitalCompute" */;
@@ -292,6 +365,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				0479F25428AF1EEB00823906 /* vox.shader */,
 				0479F20928AF1BBB00823906 /* vox.compute */,
 				0479F1FB28AF1B8C00823906 /* apps */,
 				0479F21828AF1BD000823906 /* third_party */,
@@ -312,6 +386,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0479F26128AF1FE500823906 /* engine.mm in Sources */,
+				0479F26628AF20D000823906 /* image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +405,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0479F25328AF1EEB00823906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0479F25828AF1EEB00823906 /* test.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -336,6 +420,16 @@
 			isa = PBXTargetDependency;
 			target = 0479F21828AF1BD000823906 /* third_party */;
 			targetProxy = 0479F24628AF1CE800823906 /* PBXContainerItemProxy */;
+		};
+		0479F25E28AF1F6700823906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0479F25428AF1EEB00823906 /* vox.shader */;
+			targetProxy = 0479F25D28AF1F6700823906 /* PBXContainerItemProxy */;
+		};
+		0479F26A28AF252300823906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0479F20928AF1BBB00823906 /* vox.compute */;
+			targetProxy = 0479F26928AF252300823906 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -454,8 +548,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = apps/apps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4SL5L673UU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /Users/yangfeng/Desktop/DigitalCompute;
 				LIBRARY_SEARCH_PATHS = ./third_party/glfw/build/src;
 				OTHER_LDFLAGS = "-lglfw3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,8 +567,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = apps/apps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4SL5L673UU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /Users/yangfeng/Desktop/DigitalCompute;
 				LIBRARY_SEARCH_PATHS = ./third_party/glfw/build/src;
 				OTHER_LDFLAGS = "-lglfw3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,9 +589,13 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = /Users/yangfeng/Desktop/DigitalCompute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./third_party/glfw/include,
+					./third_party/spdlog/include,
+				);
 			};
 			name = Debug;
 		};
@@ -505,9 +607,13 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = /Users/yangfeng/Desktop/DigitalCompute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./third_party/glfw/include,
+					./third_party/spdlog/include,
+				);
 			};
 			name = Release;
 		};
@@ -536,6 +642,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
+			};
+			name = Release;
+		};
+		0479F25A28AF1EEB00823906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SL5L673UU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0479F25B28AF1EEB00823906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SL5L673UU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -574,6 +698,15 @@
 			buildConfigurations = (
 				0479F22228AF1BD000823906 /* Debug */,
 				0479F22328AF1BD000823906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0479F25928AF1EEB00823906 /* Build configuration list for PBXNativeTarget "vox.shader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0479F25A28AF1EEB00823906 /* Debug */,
+				0479F25B28AF1EEB00823906 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

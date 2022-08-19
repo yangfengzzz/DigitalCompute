@@ -1,7 +1,8 @@
-// Dear ImGui: standalone example application for GLFW + Metal, using programmable pipeline
-// (GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan/Metal graphics context creation, etc.)
-// If you are new to Dear ImGui, read documentation from the docs/ folder + read the top of imgui.cpp.
-// Read online: https://github.com/ocornut/imgui/tree/master/docs
+//  Copyright (c) 2022 Feng Yang
+//
+//  I am making my contributions/submissions to this project solely in my
+//  personal capacity and am not conveying any rights to any intellectual
+//  property of any third parties.
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -16,6 +17,8 @@
 
 #import <Metal/Metal.h>
 #import <QuartzCore/QuartzCore.h>
+
+#include "vox.compute/engine.h"
 
 static void glfw_error_callback(int error, const char *description) {
     fprintf(stderr, "Glfw Error %d: %s\n", error, description);
@@ -60,17 +63,16 @@ int main(int, char **) {
     if (window == NULL)
         return 1;
 
-    id <MTLDevice> device = MTLCreateSystemDefaultDevice();
-    id <MTLCommandQueue> commandQueue = [device newCommandQueue];
+    vox::Engine engine;
 
     // Setup Platform/Renderer backends
     ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplMetal_Init(device);
+    ImGui_ImplMetal_Init(engine.device());
 
     NSWindow *nswin = glfwGetCocoaWindow(window);
     CAMetalLayer *layer = [CAMetalLayer layer];
-    layer.device = device;
-    layer.pixelFormat = MTLPixelFormatBGRA8Unorm;
+    layer.device = engine.device();
+    layer.pixelFormat = engine.colorPixelFormat();
     nswin.contentView.layer = layer;
     nswin.contentView.wantsLayer = YES;
 
@@ -95,13 +97,18 @@ int main(int, char **) {
             glfwGetFramebufferSize(window, &width, &height);
             layer.drawableSize = CGSizeMake(width, height);
             id <CAMetalDrawable> drawable = [layer nextDrawable];
+            engine.resize(width, height);
+            
+            id <MTLCommandBuffer> commandBuffer = [engine.commandQueue() commandBuffer];
+            engine.compute(commandBuffer);
 
-            id <MTLCommandBuffer> commandBuffer = [commandQueue commandBuffer];
             renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(clear_color[0] * clear_color[3], clear_color[1] * clear_color[3], clear_color[2] * clear_color[3], clear_color[3]);
             renderPassDescriptor.colorAttachments[0].texture = drawable.texture;
             renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
             renderPassDescriptor.colorAttachments[0].storeAction = MTLStoreActionStore;
             id <MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
+            engine.render(renderEncoder);
+            
             [renderEncoder pushDebugGroup:@"ImGui demo"];
 
             // Start the Dear ImGui frame
