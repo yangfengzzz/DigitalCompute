@@ -7,8 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0479F20028AF1B8C00823906 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F1FF28AF1B8C00823906 /* main.cpp */; };
+		0479F22828AF1C5F00823906 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0479F22428AF1C5F00823906 /* imgui_impl_metal.mm */; };
+		0479F22928AF1C5F00823906 /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F22528AF1C5F00823906 /* imgui_impl_metal.h */; };
+		0479F22A28AF1C5F00823906 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F22628AF1C5F00823906 /* imgui_impl_glfw.cpp */; };
+		0479F22B28AF1C5F00823906 /* imgui_impl_glfw.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F22728AF1C5F00823906 /* imgui_impl_glfw.h */; };
+		0479F23728AF1C6800823906 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F22C28AF1C6800823906 /* imgui_tables.cpp */; };
+		0479F23828AF1C6800823906 /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F22D28AF1C6800823906 /* imstb_textedit.h */; };
+		0479F23928AF1C6800823906 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F22E28AF1C6800823906 /* imgui_draw.cpp */; };
+		0479F23A28AF1C6800823906 /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F22F28AF1C6800823906 /* imconfig.h */; };
+		0479F23B28AF1C6800823906 /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F23028AF1C6800823906 /* imstb_truetype.h */; };
+		0479F23C28AF1C6800823906 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F23128AF1C6800823906 /* imgui_widgets.cpp */; };
+		0479F23D28AF1C6800823906 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F23228AF1C6800823906 /* imgui.cpp */; };
+		0479F23E28AF1C6800823906 /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F23328AF1C6800823906 /* imgui.h */; };
+		0479F23F28AF1C6800823906 /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F23428AF1C6800823906 /* imstb_rectpack.h */; };
+		0479F24028AF1C6800823906 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0479F23528AF1C6800823906 /* imgui_demo.cpp */; };
+		0479F24128AF1C6800823906 /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F23628AF1C6800823906 /* imgui_internal.h */; };
+		0479F24328AF1CD500823906 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0479F24228AF1CD500823906 /* main.mm */; };
+		0479F24928AF1CEA00823906 /* libthird_party.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F21928AF1BD000823906 /* libthird_party.a */; };
+		0479F24C28AF1D5200823906 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F24B28AF1D5200823906 /* Metal.framework */; };
+		0479F24E28AF1D5800823906 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F24D28AF1D5800823906 /* Cocoa.framework */; };
+		0479F25028AF1D5F00823906 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F24F28AF1D5F00823906 /* IOKit.framework */; };
+		0479F25228AF1D7200823906 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F25128AF1D7200823906 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0479F24628AF1CE800823906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0479F1F428AF1B8C00823906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0479F21828AF1BD000823906;
+			remoteInfo = third_party;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0479F1FA28AF1B8C00823906 /* CopyFiles */ = {
@@ -23,12 +53,53 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0479F1FC28AF1B8C00823906 /* DigitalCompute */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DigitalCompute; sourceTree = BUILT_PRODUCTS_DIR; };
-		0479F1FF28AF1B8C00823906 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0479F1FC28AF1B8C00823906 /* apps */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = apps; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479F20A28AF1BBB00823906 /* libvox.compute.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvox.compute.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479F21928AF1BD000823906 /* libthird_party.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthird_party.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0479F22428AF1C5F00823906 /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = imgui_impl_metal.mm; path = imgui/backends/imgui_impl_metal.mm; sourceTree = "<group>"; };
+		0479F22528AF1C5F00823906 /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_impl_metal.h; path = imgui/backends/imgui_impl_metal.h; sourceTree = "<group>"; };
+		0479F22628AF1C5F00823906 /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = imgui/backends/imgui_impl_glfw.cpp; sourceTree = "<group>"; };
+		0479F22728AF1C5F00823906 /* imgui_impl_glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_impl_glfw.h; path = imgui/backends/imgui_impl_glfw.h; sourceTree = "<group>"; };
+		0479F22C28AF1C6800823906 /* imgui_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_tables.cpp; path = imgui/imgui_tables.cpp; sourceTree = "<group>"; };
+		0479F22D28AF1C6800823906 /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imstb_textedit.h; path = imgui/imstb_textedit.h; sourceTree = "<group>"; };
+		0479F22E28AF1C6800823906 /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_draw.cpp; path = imgui/imgui_draw.cpp; sourceTree = "<group>"; };
+		0479F22F28AF1C6800823906 /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imconfig.h; path = imgui/imconfig.h; sourceTree = "<group>"; };
+		0479F23028AF1C6800823906 /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imstb_truetype.h; path = imgui/imstb_truetype.h; sourceTree = "<group>"; };
+		0479F23128AF1C6800823906 /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = imgui/imgui_widgets.cpp; sourceTree = "<group>"; };
+		0479F23228AF1C6800823906 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = imgui/imgui.cpp; sourceTree = "<group>"; };
+		0479F23328AF1C6800823906 /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui.h; path = imgui/imgui.h; sourceTree = "<group>"; };
+		0479F23428AF1C6800823906 /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imstb_rectpack.h; path = imgui/imstb_rectpack.h; sourceTree = "<group>"; };
+		0479F23528AF1C6800823906 /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_demo.cpp; path = imgui/imgui_demo.cpp; sourceTree = "<group>"; };
+		0479F23628AF1C6800823906 /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_internal.h; path = imgui/imgui_internal.h; sourceTree = "<group>"; };
+		0479F24228AF1CD500823906 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		0479F24A28AF1CFC00823906 /* apps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = apps.entitlements; sourceTree = "<group>"; };
+		0479F24B28AF1D5200823906 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		0479F24D28AF1D5800823906 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0479F24F28AF1D5F00823906 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		0479F25128AF1D7200823906 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0479F1F928AF1B8C00823906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0479F25228AF1D7200823906 /* QuartzCore.framework in Frameworks */,
+				0479F25028AF1D5F00823906 /* IOKit.framework in Frameworks */,
+				0479F24E28AF1D5800823906 /* Cocoa.framework in Frameworks */,
+				0479F24C28AF1D5200823906 /* Metal.framework in Frameworks */,
+				0479F24928AF1CEA00823906 /* libthird_party.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0479F20828AF1BBB00823906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0479F21728AF1BD000823906 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,33 +112,104 @@
 		0479F1F328AF1B8C00823906 = {
 			isa = PBXGroup;
 			children = (
-				0479F1FE28AF1B8C00823906 /* DigitalCompute */,
+				0479F20B28AF1BBB00823906 /* vox.compute */,
+				0479F1FE28AF1B8C00823906 /* apps */,
+				0479F21A28AF1BD000823906 /* third_party */,
 				0479F1FD28AF1B8C00823906 /* Products */,
+				0479F24828AF1CEA00823906 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		0479F1FD28AF1B8C00823906 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0479F1FC28AF1B8C00823906 /* DigitalCompute */,
+				0479F1FC28AF1B8C00823906 /* apps */,
+				0479F20A28AF1BBB00823906 /* libvox.compute.a */,
+				0479F21928AF1BD000823906 /* libthird_party.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0479F1FE28AF1B8C00823906 /* DigitalCompute */ = {
+		0479F1FE28AF1B8C00823906 /* apps */ = {
 			isa = PBXGroup;
 			children = (
-				0479F1FF28AF1B8C00823906 /* main.cpp */,
+				0479F24A28AF1CFC00823906 /* apps.entitlements */,
+				0479F24228AF1CD500823906 /* main.mm */,
 			);
-			path = DigitalCompute;
+			path = apps;
+			sourceTree = "<group>";
+		};
+		0479F20B28AF1BBB00823906 /* vox.compute */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = vox.compute;
+			sourceTree = "<group>";
+		};
+		0479F21A28AF1BD000823906 /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				0479F22F28AF1C6800823906 /* imconfig.h */,
+				0479F23628AF1C6800823906 /* imgui_internal.h */,
+				0479F23328AF1C6800823906 /* imgui.h */,
+				0479F23228AF1C6800823906 /* imgui.cpp */,
+				0479F22E28AF1C6800823906 /* imgui_draw.cpp */,
+				0479F22C28AF1C6800823906 /* imgui_tables.cpp */,
+				0479F23128AF1C6800823906 /* imgui_widgets.cpp */,
+				0479F23428AF1C6800823906 /* imstb_rectpack.h */,
+				0479F22D28AF1C6800823906 /* imstb_textedit.h */,
+				0479F23028AF1C6800823906 /* imstb_truetype.h */,
+				0479F22628AF1C5F00823906 /* imgui_impl_glfw.cpp */,
+				0479F22728AF1C5F00823906 /* imgui_impl_glfw.h */,
+				0479F22528AF1C5F00823906 /* imgui_impl_metal.h */,
+				0479F22428AF1C5F00823906 /* imgui_impl_metal.mm */,
+				0479F23528AF1C6800823906 /* imgui_demo.cpp */,
+			);
+			path = third_party;
+			sourceTree = "<group>";
+		};
+		0479F24828AF1CEA00823906 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0479F25128AF1D7200823906 /* QuartzCore.framework */,
+				0479F24F28AF1D5F00823906 /* IOKit.framework */,
+				0479F24D28AF1D5800823906 /* Cocoa.framework */,
+				0479F24B28AF1D5200823906 /* Metal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0479F20628AF1BBB00823906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0479F21528AF1BD000823906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0479F23E28AF1C6800823906 /* imgui.h in Headers */,
+				0479F23A28AF1C6800823906 /* imconfig.h in Headers */,
+				0479F23B28AF1C6800823906 /* imstb_truetype.h in Headers */,
+				0479F23F28AF1C6800823906 /* imstb_rectpack.h in Headers */,
+				0479F22B28AF1C5F00823906 /* imgui_impl_glfw.h in Headers */,
+				0479F24128AF1C6800823906 /* imgui_internal.h in Headers */,
+				0479F23828AF1C6800823906 /* imstb_textedit.h in Headers */,
+				0479F22928AF1C5F00823906 /* imgui_impl_metal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		0479F1FB28AF1B8C00823906 /* DigitalCompute */ = {
+		0479F1FB28AF1B8C00823906 /* apps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0479F20328AF1B8C00823906 /* Build configuration list for PBXNativeTarget "DigitalCompute" */;
+			buildConfigurationList = 0479F20328AF1B8C00823906 /* Build configuration list for PBXNativeTarget "apps" */;
 			buildPhases = (
 				0479F1F828AF1B8C00823906 /* Sources */,
 				0479F1F928AF1B8C00823906 /* Frameworks */,
@@ -76,11 +218,46 @@
 			buildRules = (
 			);
 			dependencies = (
+				0479F24728AF1CE800823906 /* PBXTargetDependency */,
 			);
-			name = DigitalCompute;
+			name = apps;
 			productName = DigitalCompute;
-			productReference = 0479F1FC28AF1B8C00823906 /* DigitalCompute */;
+			productReference = 0479F1FC28AF1B8C00823906 /* apps */;
 			productType = "com.apple.product-type.tool";
+		};
+		0479F20928AF1BBB00823906 /* vox.compute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0479F21228AF1BBB00823906 /* Build configuration list for PBXNativeTarget "vox.compute" */;
+			buildPhases = (
+				0479F20628AF1BBB00823906 /* Headers */,
+				0479F20728AF1BBB00823906 /* Sources */,
+				0479F20828AF1BBB00823906 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vox.compute;
+			productName = vox.compute;
+			productReference = 0479F20A28AF1BBB00823906 /* libvox.compute.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0479F21828AF1BD000823906 /* third_party */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0479F22128AF1BD000823906 /* Build configuration list for PBXNativeTarget "third_party" */;
+			buildPhases = (
+				0479F21528AF1BD000823906 /* Headers */,
+				0479F21628AF1BD000823906 /* Sources */,
+				0479F21728AF1BD000823906 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = third_party;
+			productName = third_party;
+			productReference = 0479F21928AF1BD000823906 /* libthird_party.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +269,12 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					0479F1FB28AF1B8C00823906 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0479F20928AF1BBB00823906 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					0479F21828AF1BD000823906 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
@@ -109,7 +292,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0479F1FB28AF1B8C00823906 /* DigitalCompute */,
+				0479F20928AF1BBB00823906 /* vox.compute */,
+				0479F1FB28AF1B8C00823906 /* apps */,
+				0479F21828AF1BD000823906 /* third_party */,
 			);
 		};
 /* End PBXProject section */
@@ -119,11 +304,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0479F20028AF1B8C00823906 /* main.cpp in Sources */,
+				0479F24328AF1CD500823906 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0479F20728AF1BBB00823906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0479F21628AF1BD000823906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0479F22828AF1C5F00823906 /* imgui_impl_metal.mm in Sources */,
+				0479F23728AF1C6800823906 /* imgui_tables.cpp in Sources */,
+				0479F22A28AF1C5F00823906 /* imgui_impl_glfw.cpp in Sources */,
+				0479F23C28AF1C6800823906 /* imgui_widgets.cpp in Sources */,
+				0479F23928AF1C6800823906 /* imgui_draw.cpp in Sources */,
+				0479F24028AF1C6800823906 /* imgui_demo.cpp in Sources */,
+				0479F23D28AF1C6800823906 /* imgui.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0479F24728AF1CE800823906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0479F21828AF1BD000823906 /* third_party */;
+			targetProxy = 0479F24628AF1CE800823906 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0479F20128AF1B8C00823906 /* Debug */ = {
@@ -238,20 +452,90 @@
 		0479F20428AF1B8C00823906 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = apps/apps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SL5L673UU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = ./third_party/glfw/build/src;
+				OTHER_LDFLAGS = "-lglfw3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./third_party/glfw/include,
+					./third_party/imgui,
+				);
 			};
 			name = Debug;
 		};
 		0479F20528AF1B8C00823906 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = apps/apps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SL5L673UU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = ./third_party/glfw/build/src;
+				OTHER_LDFLAGS = "-lglfw3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					./third_party/glfw/include,
+					./third_party/imgui,
+				);
+			};
+			name = Release;
+		};
+		0479F21328AF1BBB00823906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SL5L673UU;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
+			};
+			name = Debug;
+		};
+		0479F21428AF1BBB00823906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SL5L673UU;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
+			};
+			name = Release;
+		};
+		0479F22228AF1BD000823906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SL5L673UU;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
+			};
+			name = Debug;
+		};
+		0479F22328AF1BD000823906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SL5L673UU;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = ./third_party/glfw/include;
 			};
 			name = Release;
 		};
@@ -267,11 +551,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0479F20328AF1B8C00823906 /* Build configuration list for PBXNativeTarget "DigitalCompute" */ = {
+		0479F20328AF1B8C00823906 /* Build configuration list for PBXNativeTarget "apps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0479F20428AF1B8C00823906 /* Debug */,
 				0479F20528AF1B8C00823906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0479F21228AF1BBB00823906 /* Build configuration list for PBXNativeTarget "vox.compute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0479F21328AF1BBB00823906 /* Debug */,
+				0479F21428AF1BBB00823906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0479F22128AF1BD000823906 /* Build configuration list for PBXNativeTarget "third_party" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0479F22228AF1BD000823906 /* Debug */,
+				0479F22328AF1BD000823906 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
