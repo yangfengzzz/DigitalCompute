@@ -35,6 +35,7 @@
 		0479F26628AF20D000823906 /* image.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479F26428AF20D000823906 /* image.m */; };
 		0479F26828AF224800823906 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 0479F26728AF224800823906 /* logging.h */; };
 		0479F26B28AF252500823906 /* libvox.compute.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0479F20A28AF1BBB00823906 /* libvox.compute.a */; };
+		04C3FF5F28BE44CA00E6C776 /* sort.metal in Sources */ = {isa = PBXBuildFile; fileRef = 04C3FF5E28BE44CA00E6C776 /* sort.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		0479F26728AF224800823906 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
 		0479F26C28AF25CC00823906 /* asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = asset.xcassets; sourceTree = "<group>"; };
 		0479F26F28AF2B0D00823906 /* Image.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Image.tga; sourceTree = "<group>"; };
+		04C3FF5E28BE44CA00E6C776 /* sort.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = sort.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			children = (
 				0479F25C28AF1F2200823906 /* common.h */,
 				0479F25728AF1EEB00823906 /* test.metal */,
+				04C3FF5E28BE44CA00E6C776 /* sort.metal */,
 			);
 			path = vox.shader;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0479F25828AF1EEB00823906 /* test.metal in Sources */,
+				04C3FF5F28BE44CA00E6C776 /* sort.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
