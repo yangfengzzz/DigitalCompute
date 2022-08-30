@@ -1,9 +1,8 @@
+//  Copyright (c) 2022 Feng Yang
 //
-//  sort.metal
-//  vox.shader
-//
-//  Created by 杨丰 on 2022/8/30.
-//
+//  I am making my contributions/submissions to this project solely in my
+//  personal capacity and am not conveying any rights to any intellectual
+//  property of any third parties.
 
 #include <metal_stdlib>
 using namespace metal;
